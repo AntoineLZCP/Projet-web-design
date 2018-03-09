@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="store">  <!-- active le module 'store' (dans script.js) au chargement du document -->
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;
+		charset=utf-8"/>
+		<title>the title</title>
+		<script type= "text/javascript" src="./vendor/angular/angular.js"></script>
+		<script type= "text/javascript" src="./js/script.js"></script>
+		<link rel= 'stylesheet' type= 'text/css' href="./css/style.css" />
+		<link rel= 'stylesheet' type= 'text/css' href="./vendor/bootstrap/bootstrap.css" />
+
+	</head>
+	
+	<body>
+	<div ng-controller="storeController as storectrl" class = "container cheeses">
+		<!--{{storectrl.list}}-->
+		
+		<div class="row">
+			<div class="col-md-4">name
+			</div><div class="col-md-1">fat
+			</div><div class="col-md-4">fans
+			</div>
+		</div>		
+		<div class = "row" ng-repeat= "cheese in storectrl.list">
+			<div class="col-md-4">{{cheese.name}}
+			</div><div class="col-md-1">{{cheese.mg|percent}}%
+			</div><div class="col-md-4">{{cheese.fans}}
+
+
+				dff
+			</div>
+		</div>
+	</div>
+		
+	</body>
+</html>
